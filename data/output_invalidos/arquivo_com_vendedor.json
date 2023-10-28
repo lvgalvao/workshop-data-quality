@@ -1,9 +1,0 @@
-{
-    "email": "cliente@example.com",
-    "data": "2023-10-01T00:00:00",
-    "valor": 150.0,
-    "produto": "cadeira",
-    "quantidade": 5,
-    "categoria": "categoria1",
-    "vendedor": "Carlos"
-}
