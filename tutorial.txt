@@ -28,16 +28,15 @@ Criar o arquivo models.py
         categoria: str
 
 5- Sistema de observabilidade
-pip install pip install sentry_sdk
-import sentry_sdk
-from sentry_sdk import capture_message, flush
+    pip install pip install sentry_sdk
+    import sentry_sdk
+    from sentry_sdk import capture_message, flush
 
-5- Aumentando as regras de negócio
-forbit, model_config = ConfigDict(extra='ignore')
-Email, só permitir @gmail.com ex 
-Valor e quantidade maior que zero PositiveInt
-Categoria, só permitir 3 categorias Validate
-Enum
+6- Aumentando as regras de negócio
+    forbit, model_config = ConfigDict(extra='ignore')
+    Email, só permitir @gmail.com ex 
+    Valor e quantidade maior que zero PositiveInt
+    Categoria, só permitir 3 categorias Validate
+    Enum
 
-
-Criar aplicativo streamlit
+7-Criar aplicativo streamlit

@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("Escolha um arquivo Excel", type=['xlsx'])
 if uploaded_file:
     try:
         # Ler o arquivo Excel com o Pandas
-        df = pd.read_excel(uploaded_file, engine='openpyxl')
+        df = pd.read_excel(uploaded_file, engine='openpyxl', index_col=None)
 
         # Validação dos dados com o esquema Pydantic
         sucesso, mensagem = validar_dados(df)  # Passando o DataFrame diretamente
