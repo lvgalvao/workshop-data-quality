@@ -1,0 +1,7 @@
+{
+    "email": "cliente@example.com",
+    "valor": 150.0,
+    "produto": "cadeira",
+    "quantidade": 5,
+    "categoria": "categoria1"
+}

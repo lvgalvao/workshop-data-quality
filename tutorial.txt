@@ -8,8 +8,10 @@ source .venv/bin/activate
 mkdir src
 mv src
 touch pipeline.py
+criar um arquivo.json
+criar um arquivo_sem_data.json
 
-3- Instalar as dependências
+4- Instalar as dependências
 pip install pydantic
 
 Criar o arquivo models.py
