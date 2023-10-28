@@ -3,21 +3,21 @@ import streamlit as st
 import pandas as pd
 from pydantic import ValidationError
 from models import Vendas  # Ajuste o caminho se necessário
-import json
 
 def validar_dados(dados):
     """
     Valida os dados com base no modelo Pydantic.
     """
     erros = []
-    for item in dados:  # Validando cada registro individualmente
+    for item in dados.itertuples():  # Iterando diretamente pelos registros do DataFrame
         try:
-            Vendas(**item)  # Se os dados forem inválidos, isso levantará uma ValidationError
+            # Convertendo o registro do DataFrame para um dicionário e validando
+            Vendas(**item._asdict())
         except ValidationError as e:
-            erros.append(e.errors())  # Coletando os erros para cada item inválido
+            erros.append(e.errors())
 
     if erros:
-        return False, erros  # Se houver algum erro, retorne False junto com os erros coletados
+        return False, erros
     return True, "Todos os registros são válidos!"
 
 # Título da aplicação
@@ -31,12 +31,8 @@ if uploaded_file:
         # Ler o arquivo Excel com o Pandas
         df = pd.read_excel(uploaded_file, engine='openpyxl')
 
-        # Converter o DataFrame em JSON e depois de volta para garantir um formato de dicionário adequado
-        json_str = df.to_json(orient='records')
-        dados = json.loads(json_str)
-
         # Validação dos dados com o esquema Pydantic
-        sucesso, mensagem = validar_dados(dados)
+        sucesso, mensagem = validar_dados(df)  # Passando o DataFrame diretamente
 
         # Exibindo os resultados da validação
         if sucesso:

@@ -1,22 +1,35 @@
 # models.py
-from pydantic import BaseModel, EmailStr, validator, PositiveFloat, PositiveInt
+from pydantic import BaseModel
 from datetime import datetime
-from enum import Enum
-from typing import Optional
-
-class CategoriaEnum(str, Enum):
-    categoria1 = "categoria1"
-    categoria2 = "categoria2"
-    categoria3 = "categoria3"
-
 class Vendas(BaseModel):
-    email: EmailStr
-    data: datetime
-    valor: PositiveFloat
-    produto: Optional[str] = None
-    quantidade: PositiveInt
-    categoria: CategoriaEnum
+    """
+    Modelo de dados para as vendas.
 
-    @validator('categoria')
-    def categoria_deve_estar_no_enum(cls, error):
-        return error
+    Args:
+        email (str): email do comprador
+        data (datetime): data da compra
+        valor (int): valor da compra
+        produto (str): nome do produto
+        quantidade (int): quantidade de produtos
+        categoria (str): categoria do produto
+
+    Example:
+        Arquivo valido: 
+
+        ```json
+        {
+            "email": "cliente@example.com",
+            "data": "2023-10-01T00:00:00",
+            "valor": 150.0,
+            "produto": Cadeira,
+            "quantidade": 5,
+            "categoria": "categoria1"
+        }
+        ```
+    """
+    email: str
+    data: datetime
+    valor: int
+    produto: str
+    quantidade: int
+    categoria: str

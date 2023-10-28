@@ -1,0 +1,14 @@
+site_name: Documentação Tabela
+theme:
+  name: material # or other theme
+  palette:
+    primary: blue
+  language: pt
+
+repo_name: "lvgalvao/workshop-data-quality"
+repo_url: "https://github.com/lvgalvao/workshop-data-quality"
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
