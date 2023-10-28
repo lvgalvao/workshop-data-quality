@@ -4,21 +4,22 @@ import pandas as pd
 from pydantic import ValidationError
 from models import Vendas  # Ajuste o caminho se necessário
 
-def validar_dados(dados):
+def validar_dados(dataframe):
     """
     Valida os dados com base no modelo Pydantic.
     """
     erros = []
-    for item in dados.itertuples():  # Iterando diretamente pelos registros do DataFrame
+    for _, row in dataframe.iterrows():  # Iterando através das linhas do DataFrame
         try:
-            # Convertendo o registro do DataFrame para um dicionário e validando
-            Vendas(**item._asdict())
+            # Convertendo a linha do DataFrame para um dicionário e validando
+            Vendas(**row.to_dict())
         except ValidationError as e:
             erros.append(e.errors())
 
     if erros:
-        return False, erros
-    return True, "Todos os registros são válidos!"
+        return False, erros  # Retornando os erros se existirem
+
+    return True, "Todos os registros são válidos!"  # Retornando mensagem de sucesso
 
 # Título da aplicação
 st.title('Validador de Dados de Vendas')
@@ -36,10 +37,12 @@ if uploaded_file:
 
         # Exibindo os resultados da validação
         if sucesso:
-            st.success(mensagem)
+            st.success(mensagem)  # Aqui usamos a mensagem de retorno da validação
         else:
             st.error("Erro de validação encontrado:")
-            st.json(mensagem)  # Para mostrar os erros de validação em formato JSON
+            for erro in mensagem:  # Iterando sobre cada erro e imprimindo-o
+                st.json(erro)  # Mostrando os detalhes do erro
 
     except Exception as e:
         st.error(f"Ocorreu um erro: {e}")
+
