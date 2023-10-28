@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bem-vinda-a-nossa-documentacao" class="md-skip">
+        <a href="#welcome-to-mkdocs" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bem vinda a nossa documentação
+              Welcome to MkDocs
             
           </span>
         </div>
@@ -233,7 +233,7 @@
           
   
   <span class="md-ellipsis">
-    Bem vinda a nossa documentação
+    Welcome to MkDocs
   </span>
   
 
@@ -244,7 +244,7 @@
         
   
   <span class="md-ellipsis">
-    Bem vinda a nossa documentação
+    Welcome to MkDocs
   </span>
   
 
@@ -331,8 +331,8 @@
   
 
 
-<h1 id="bem-vinda-a-nossa-documentacao">Bem vinda a nossa documentação</h1>
-<p>A tabela que eu preciso é</p>
+<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+<p>O esquema da minha tabela é esse aqui</p>
 
 
 <div class="doc doc-object doc-class">
@@ -345,7 +345,7 @@
             Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
 
   
-      <p>Modelo de dados para as vendas.</p>
+      <p>Classe que representa o schema de vendas.</p>
 
 
 
@@ -367,7 +367,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>email do comprador</p>
+              <p>Email do cliente.</p>
             </div>
           </td>
           <td>
@@ -381,7 +381,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>data da compra</p>
+              <p>Data da compra.</p>
             </div>
           </td>
           <td>
@@ -391,11 +391,11 @@
         <tr>
           <td><code>valor</code></td>
           <td>
-                <code>int</code>
+                <code>float</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>valor da compra</p>
+              <p>Valor total da compra.</p>
             </div>
           </td>
           <td>
@@ -409,7 +409,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>nome do produto</p>
+              <p>Nome do produto.</p>
             </div>
           </td>
           <td>
@@ -423,7 +423,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>quantidade de produtos</p>
+              <p>Quantidade do produto.</p>
             </div>
           </td>
           <td>
@@ -437,7 +437,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>categoria do produto</p>
+              <p>Categoria do produto.</p>
             </div>
           </td>
           <td>
@@ -448,27 +448,21 @@
   </table>
 
 <details class="example" open>
-  <summary>Example</summary>
-  <p>Arquivo valido: </p>
+  <summary>example</summary>
+  <p>arquivo valido:</p>
 <pre><code class="language-json">{
-    &quot;email&quot;: &quot;cliente@example.com&quot;,
-    &quot;data&quot;: &quot;2023-10-01T00:00:00&quot;,
-    &quot;valor&quot;: 150.0,
-    &quot;produto&quot;: Cadeira,
-    &quot;quantidade&quot;: 5,
-    &quot;categoria&quot;: &quot;categoria1&quot;
+&quot;email&quot;: &quot;cliente@example.com&quot;,
+&quot;data&quot;: &quot;2023-10-01T00:00:00&quot;,
+&quot;valor&quot;: 150.0,
+&quot;produto&quot;: &quot;cadeira&quot;,
+&quot;quantidade&quot;: 5,
+&quot;categoria&quot;: &quot;categoria1&quot;
 }
 </code></pre>
 </details>
             <details class="quote">
               <summary>Source code in <code>src/models.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
@@ -493,38 +487,60 @@
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Vendas</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Vendas</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Modelo de dados para as vendas.</span>
+<span class="sd">    Classe que representa o schema de vendas.</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        email (str): email do comprador</span>
-<span class="sd">        data (datetime): data da compra</span>
-<span class="sd">        valor (int): valor da compra</span>
-<span class="sd">        produto (str): nome do produto</span>
-<span class="sd">        quantidade (int): quantidade de produtos</span>
-<span class="sd">        categoria (str): categoria do produto</span>
+<span class="sd">    args:</span>
+<span class="sd">        email (str): Email do cliente.</span>
+<span class="sd">        data (datetime): Data da compra.</span>
+<span class="sd">        valor (float): Valor total da compra.</span>
+<span class="sd">        produto (str): Nome do produto.</span>
+<span class="sd">        quantidade (int): Quantidade do produto.</span>
+<span class="sd">        categoria (str): Categoria do produto.</span>
 
-<span class="sd">    Example:</span>
-<span class="sd">        Arquivo valido: </span>
+<span class="sd">    example:</span>
+<span class="sd">        arquivo valido:</span>
 
 <span class="sd">        ```json</span>
 <span class="sd">        {</span>
-<span class="sd">            &quot;email&quot;: &quot;cliente@example.com&quot;,</span>
-<span class="sd">            &quot;data&quot;: &quot;2023-10-01T00:00:00&quot;,</span>
-<span class="sd">            &quot;valor&quot;: 150.0,</span>
-<span class="sd">            &quot;produto&quot;: Cadeira,</span>
-<span class="sd">            &quot;quantidade&quot;: 5,</span>
-<span class="sd">            &quot;categoria&quot;: &quot;categoria1&quot;</span>
+<span class="sd">        &quot;email&quot;: &quot;cliente@example.com&quot;,</span>
+<span class="sd">        &quot;data&quot;: &quot;2023-10-01T00:00:00&quot;,</span>
+<span class="sd">        &quot;valor&quot;: 150.0,</span>
+<span class="sd">        &quot;produto&quot;: &quot;cadeira&quot;,</span>
+<span class="sd">        &quot;quantidade&quot;: 5,</span>
+<span class="sd">        &quot;categoria&quot;: &quot;categoria1&quot;</span>
 <span class="sd">        }</span>
 <span class="sd">        ```</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">extra</span><span class="o">=</span><span class="s1">&#39;forbid&#39;</span><span class="p">)</span>
+    <span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">datetime</span>
-    <span class="n">valor</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">produto</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">quantidade</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">categoria</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">valor</span><span class="p">:</span> <span class="n">PositiveFloat</span>
+    <span class="n">produto</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">quantidade</span><span class="p">:</span> <span class="n">PositiveInt</span>
+    <span class="n">categoria</span><span class="p">:</span> <span class="n">CategoriaEnum</span>
+
+    <span class="nd">@validator</span><span class="p">(</span><span class="s1">&#39;categoria&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">categoria_deve_estar_no_enum</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">error</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">error</span>
 </code></pre></div></td></tr></table></div>
             </details>
 
