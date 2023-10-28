@@ -40,3 +40,7 @@ Criar o arquivo models.py
     Enum
 
 7-Criar aplicativo streamlit
+
+streamlit run app/app.py
+
+7-Criar documentação com Mkdocs
