@@ -20,7 +20,7 @@ class Vendas(BaseModel):
         quantidade (int): Quantidade do produto.
         categoria (str): Categoria do produto.
     
-    examples:
+    example:
         arquivo valido:
         
         ```json
