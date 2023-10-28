@@ -1,0 +1,8 @@
+{
+    "email": "cliente@example.com",
+    "data": "2023-10-01T00:00:00",
+    "valor": -50,
+    "produto": "Computador",
+    "quantidade": -5,
+    "categoria": "categoria1"
+}

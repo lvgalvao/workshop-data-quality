@@ -1,0 +1,25 @@
+Criar um ambiente virtual
+python3 -m venv .venv
+
+Entrar no ambiente virtual
+source .venv/bin/activate
+
+Instalar as dependências
+pip install pandas pydantic
+
+Criar o arquivo models.py
+
+    from pydantic import BaseModel
+    from datetime import datetime
+
+    class Vendas(BaseModel):
+        email: str
+        data: datetime
+        valor: int
+        produto: str
+        quantidade: int
+        categoria: str
+
+Sistema de log Sentry
+
+Criar aplicativo streamlit
