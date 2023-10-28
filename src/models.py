@@ -39,6 +39,7 @@ class Vendas(BaseModel):
     model_config = ConfigDict(extra='forbid')
     email: EmailStr
     data: datetime
+    valor: PositiveFloat
     produto: Optional[str] = None
     quantidade: PositiveInt
     categoria: CategoriaEnum
