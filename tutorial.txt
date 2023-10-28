@@ -1,11 +1,16 @@
-Criar um ambiente virtual
+1- Criar um ambiente virtual
 python3 -m venv .venv
 
-Entrar no ambiente virtual
+2- Entrar no ambiente virtual
 source .venv/bin/activate
 
-Instalar as dependências
-pip install pandas pydantic
+3- Criar nossa pipeline original
+mkdir src
+mv src
+touch pipeline.py
+
+3- Instalar as dependências
+pip install pydantic
 
 Criar o arquivo models.py
 
