@@ -1,5 +1,8 @@
 # Evitando que o seu PowerBI Exploda
 
+Workshop: Data Saturday Vitória 28/10 de 2023
+Apresentação: [link](https://docs.google.com/presentation/d/1yCcScgyPux4DVa_JOgLCrqHhX0h2IUSYtdDSF0A7fMY/edit?usp=sharing)
+
 ## Introdução
 
 Em um mundo inundado de dados, a necessidade de manter a integridade dos dados ao realizar análises é mais crucial do que nunca. "Evitando que o seu PowerBI Exploda" nasceu da necessidade de assegurar que os dados alimentados em nossos sistemas de Business Intelligence (BI) sejam precisos, consistentes e confiáveis. Erros nos dados podem causar não apenas falhas no sistema, mas também decisões empresariais errôneas com consequências graves.
