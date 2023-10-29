@@ -1,6 +1,6 @@
 # Evitando que o seu PowerBI Exploda
 
-Workshop: Data Saturday Vitória 28/10 de 2023
+Workshop: Data Saturday Vitória-ES 28/10 de 2023
 Apresentação: [link](https://docs.google.com/presentation/d/1yCcScgyPux4DVa_JOgLCrqHhX0h2IUSYtdDSF0A7fMY/edit?usp=sharing)
 
 ## Introdução
