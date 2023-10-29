@@ -9,6 +9,7 @@ Em um mundo inundado de dados, a necessidade de manter a integridade dos dados a
 Este projeto utiliza o poder do Pydantic para definir contratos de dados (também conhecidos como modelos ou esquemas) que estabelecem regras claras e rigorosas para a validação de dados. Ao assegurar que cada ponto de dados adira estritamente a um modelo bem definido, aumentamos a confiabilidade das análises e relatórios produzidos pelo PowerBI.
 
 ![datacontract](static/datacontract.png)
+
 ## Objetivo
 
 O principal objetivo deste projeto é criar um sistema de validação de dados robusto e fácil de usar que proteja contra a integração de dados imprecisos ou formatados incorretamente. Ao fazer isso, salvaguardamos a integridade dos processos de análise subsequentes e garantimos que as decisões baseadas nesses dados sejam tomadas com confiança.
@@ -34,6 +35,8 @@ Este modelo garante que o campo de e-mail seja válido, que a quantidade e o val
 ## Documentação com MkDocs
 
 Para manter nossos processos transparentes e acessíveis, utilizamos o MkDocs, uma ferramenta de documentação rápida e eficaz. Com MkDocs, podemos criar uma documentação abrangente para nossos contratos de dados, incluindo descrições de campos, tipos de dados esperados e exemplos de dados válidos e inválidos.
+
+![docs](static/docs.png)
 
 A documentação é uma parte vital do nosso compromisso com a clareza e a acessibilidade, proporcionando uma referência rápida e confiável para todos os membros da equipe.
 
