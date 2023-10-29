@@ -4,8 +4,11 @@
 
 Em um mundo inundado de dados, a necessidade de manter a integridade dos dados ao realizar análises é mais crucial do que nunca. "Evitando que o seu PowerBI Exploda" nasceu da necessidade de assegurar que os dados alimentados em nossos sistemas de Business Intelligence (BI) sejam precisos, consistentes e confiáveis. Erros nos dados podem causar não apenas falhas no sistema, mas também decisões empresariais errôneas com consequências graves.
 
+![arquitetura](static/arquitetura.png)
+
 Este projeto utiliza o poder do Pydantic para definir contratos de dados (também conhecidos como modelos ou esquemas) que estabelecem regras claras e rigorosas para a validação de dados. Ao assegurar que cada ponto de dados adira estritamente a um modelo bem definido, aumentamos a confiabilidade das análises e relatórios produzidos pelo PowerBI.
 
+![datacontract](static/datacontract.png)
 ## Objetivo
 
 O principal objetivo deste projeto é criar um sistema de validação de dados robusto e fácil de usar que proteja contra a integração de dados imprecisos ou formatados incorretamente. Ao fazer isso, salvaguardamos a integridade dos processos de análise subsequentes e garantimos que as decisões baseadas nesses dados sejam tomadas com confiança.

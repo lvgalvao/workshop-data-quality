@@ -8,7 +8,7 @@ import sentry_sdk
 from sentry_sdk import capture_message, flush
 
 sentry_sdk.init(
-    dsn="https://d8dccb4fc098858bac62b6d3a84e0d0f@o4505699197452288.ingest.sentry.io/4506129372545024",
+    dsn="seu_acesso_aqui",
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     traces_sample_rate=1.0,
